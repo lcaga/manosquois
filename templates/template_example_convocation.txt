@@ -1,0 +1,70 @@
+EXEMPLE DE TEMPLATE - CONVOCATION À L'AG
+=======================================
+
+Ce fichier montre la structure pour créer le template Word "Convocation à l'AG des associés.docx"
+
+--------------------------------------------------
+
+CONVOCATION À L'ASSEMBLÉE GÉNÉRALE ORDINAIRE
+
+{{ denomination_sociale_de_la_sas }}
+Société par Actions Simplifiée au capital de {{ montant_du_capital_social }}
+Siège social : {{ adresse_du_siege_social }}
+Immatriculée au RCS de {{ ville_du_greffe_rcs }} sous le numéro {{ numero_immatriculation_rcs }}
+
+--------------------------------------------------
+
+Madame, Monsieur,
+
+Nous avons l'honneur de vous convoquer à l'Assemblée Générale Ordinaire de la société {{ denomination_sociale_de_la_sas }} qui se tiendra :
+
+📅 DATE : {{ date_assemblee_generale_formatee }}
+🕐 HEURE : {{ heure_assemblee_generale }}
+📍 LIEU : {{ lieu_assemblee_generale }}
+
+--------------------------------------------------
+
+ORDRE DU JOUR :
+
+1️⃣ Approbation des comptes annuels de l'exercice clos le {{ date_cloture_exercice }}
+
+2️⃣ Affectation du résultat de l'exercice
+   Résultat de l'exercice : {{ montant_resultat_benefice_ou_perte }}
+
+3️⃣ Approbation des conventions réglementées
+
+4️⃣ Quitus aux dirigeants pour leur gestion
+
+5️⃣ Questions diverses
+
+--------------------------------------------------
+
+INFORMATIONS IMPORTANTES :
+
+• Exercice concerné : du [date début] au {{ date_cloture_exercice }}
+• Capital social : {{ montant_du_capital_social }}
+• Président de séance : {{ nom_prenom_president_de_seance }}
+• Secrétaire de séance : {{ nom_prenom_secretaire_de_seance }}
+
+--------------------------------------------------
+
+PIÈCES À APPORTER :
+☐ Pièce d'identité en cours de validité
+☐ Justificatif de qualité d'associé
+☐ Pouvoir éventuel (si représentation)
+
+--------------------------------------------------
+
+Nous vous prions d'agréer, Madame, Monsieur, l'expression de nos salutations distinguées.
+
+La Gérance
+
+Fait le {{ date_assemblee_generale_formatee }}
+
+--------------------------------------------------
+
+ATTENTION : 
+- Créez ce document en format Word (.docx)
+- Placez-le dans le dossier templates/
+- Nommez-le exactement : "Convocation à l'AG des associés.docx"
+- Utilisez la syntaxe {{ variable }} pour les variables Jinja2
