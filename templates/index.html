@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Documents pour Assemblée Générale de SAS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Générateur de Documents pour Assemblée Générale de SAS</h1>
+            <p class="subtitle">Automatisation de la génération de documents juridiques</p>
+        </header>
+
+        <!-- Section 1: Téléchargement des documents -->
+        <section id="upload-section" class="section">
+            <h2>📁 Documents requis</h2>
+            <div class="upload-grid">
+                <div class="upload-item">
+                    <label for="kbis">Extrait Kbis (moins de 3 mois)</label>
+                    <input type="file" id="kbis" name="kbis" accept=".pdf,.docx,.doc" required>
+                    <span class="file-status" id="kbis-status">Aucun fichier sélectionné</span>
+                </div>
+                
+                <div class="upload-item">
+                    <label for="statuts">Statuts de la société à jour</label>
+                    <input type="file" id="statuts" name="statuts" accept=".pdf,.docx,.doc" required>
+                    <span class="file-status" id="statuts-status">Aucun fichier sélectionné</span>
+                </div>
+                
+                <div class="upload-item">
+                    <label for="comptes_n1">Comptes annuels exercice N-1</label>
+                    <input type="file" id="comptes_n1" name="comptes_n1" accept=".pdf,.docx,.doc" required>
+                    <span class="file-status" id="comptes_n1-status">Aucun fichier sélectionné</span>
+                </div>
+                
+                <div class="upload-item">
+                    <label for="comptes_n2">Comptes annuels exercice N-2</label>
+                    <input type="file" id="comptes_n2" name="comptes_n2" accept=".pdf,.docx,.doc" required>
+                    <span class="file-status" id="comptes_n2-status">Aucun fichier sélectionné</span>
+                </div>
+                
+                <div class="upload-item">
+                    <label for="comptes_n3">Comptes annuels exercice N-3</label>
+                    <input type="file" id="comptes_n3" name="comptes_n3" accept=".pdf,.docx,.doc" required>
+                    <span class="file-status" id="comptes_n3-status">Aucun fichier sélectionné</span>
+                </div>
+            </div>
+            
+            <button id="continue-btn" class="primary-btn" disabled>
+                Continuer vers les informations de l'AG
+            </button>
+        </section>
+
+        <!-- Section 2: Interface conversationnelle -->
+        <section id="conversation-section" class="section" style="display: none;">
+            <h2>💬 Informations de l'Assemblée Générale</h2>
+            <div class="chat-container">
+                <div id="chat-messages" class="chat-messages">
+                    <!-- Les messages apparaîtront ici dynamiquement -->
+                </div>
+                <div id="chat-input" class="chat-input">
+                    <!-- L'input actuel apparaîtra ici -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Génération -->
+        <section id="generation-section" class="section" style="display: none;">
+            <h2>⚡ Génération des documents</h2>
+            <div class="generation-container">
+                <button id="generate-btn" class="generate-btn">
+                    <span class="btn-icon">📄</span>
+                    Générer les documents
+                </button>
+                <div id="progress" class="progress" style="display: none;">
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <p class="progress-text">Génération en cours...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Résultats -->
+        <section id="results-section" class="section" style="display: none;">
+            <h2>✅ Documents générés</h2>
+            <div id="results" class="results-grid">
+                <!-- Les liens de téléchargement apparaîtront ici -->
+            </div>
+        </section>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

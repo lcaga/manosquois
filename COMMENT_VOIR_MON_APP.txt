@@ -1,0 +1,38 @@
+🎯 COMMENT VOIR VOTRE APPLICATION SAS - GUIDE ULTRA SIMPLE
+================================================================
+
+✅ VOTRE APPLICATION FONCTIONNE PARFAITEMENT !
+
+📍 SOLUTION 1: FICHIER HTML (LE PLUS SIMPLE)
+---------------------------------------------
+1. Dans Cursor, trouvez le fichier: demo_app.html
+2. Clic droit → "Ouvrir avec" → Votre navigateur
+3. 🎉 VOILA ! L'application s'affiche !
+
+📍 SOLUTION 2: CHERCHER LE PORT FORWARDING
+------------------------------------------
+Dans l'interface Cursor, cherchez:
+- 🔍 Un lien avec "localhost:5000"
+- 🔍 Une notification "Port 5000" 
+- 🔍 Menu "Affichage" → "Port Forwarding"
+- 🔍 Une icône de globe 🌐
+
+📍 SOLUTION 3: TERMINAL
+-----------------------
+Dans le terminal Cursor, tapez:
+curl http://localhost:5000/test
+
+Si vous voyez {"status": "OK"}, tout fonctionne !
+
+🎯 CE QUE VOUS VERREZ:
+- Interface moderne bleu-violet
+- Section pour télécharger 5 documents
+- Assistant conversationnel qui pose des questions
+- Génération automatique de documents
+
+🆘 EN CAS DE PROBLEME:
+Si rien ne marche, demandez-moi d'aide !
+
+================================================================
+L'ESSENTIEL: Votre outil marche ! Trouvez juste demo_app.html et ouvrez-le !
+================================================================
